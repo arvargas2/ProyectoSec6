@@ -30,3 +30,31 @@ def imprimir_cancion(cancion):
 
 
 # --------- transacciones -----------------------------
+def agregar_cancion():
+    titulo = str(input("Ingrese titulo:")).strip()
+    while not validar_texto_vacio(titulo):
+        titulo = str(input("Ingrese titulo:")).strip()
+
+    artista = str(input("Ingrese artista: ")).strip()
+    while not validar_texto_vacio(artista):
+        artista = str(input("Ingrese artista: ")).strip()
+
+    while True:
+        try:
+            duracion = int(input("Ingrese duracion:"))
+            while not validar_duracion(duracion):
+                duracion = int(input("Ingrese duracion:"))
+            break
+        except:
+            print("Error debe ser un N°")
+
+    # ---- armamos json cancion -------------------
+    cancion = {
+        "titulo": titulo,
+        "artista": artista,
+        "duracion": duracion,
+        "favorita": False,
+    }
+    # ------ cargamos el json a la lista -----------------
+    canciones_list.append(cancion)
+    print(" <<< Registro almacenado >>>")
