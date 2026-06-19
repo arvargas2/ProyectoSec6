@@ -83,3 +83,30 @@ def buscar_cancion():
             imprimir_cancion(cancion)
     if encontrado == False:
         print("NO hay canciones con dicho titulo")
+        
+        
+#-- data test ------------------------------
+def cargar_data_test():
+    cancion_1 = {
+        "titulo": "Shape of You",
+        "artista": "Ed Sheeran",
+        "duracion": 233,
+        "favorita": False,        
+    }        
+    cancion_2 = {
+        "titulo": "Perfect",
+        "artista": "Ed Sheeran",
+        "duracion": 251,
+        "favorita": True,        
+    }
+    cancion_3 = {
+        "titulo": "Billie Jean",
+        "artista": "Michael Jackson",
+        "duracion": 202,
+        "favorita": False,        
+    }
+    
+    canciones_list.append(cancion_1)
+    canciones_list.append(cancion_2)
+    canciones_list.append(cancion_3)
+    print("\n\n <<< data test cagada >>>")
