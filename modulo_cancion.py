@@ -58,3 +58,13 @@ def agregar_cancion():
     # ------ cargamos el json a la lista -----------------
     canciones_list.append(cancion)
     print(" <<< Registro almacenado >>>")
+
+
+# -----------------------------------------------
+# es en realidad un listar!!!!!
+def mostrar_canciones():
+    if len(canciones_list) == 0:
+        print("NO hay datos en la BD")
+    else:
+        for cancion in canciones_list:
+            imprimir_cancion(cancion)
