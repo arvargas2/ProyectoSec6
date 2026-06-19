@@ -68,3 +68,18 @@ def mostrar_canciones():
     else:
         for cancion in canciones_list:
             imprimir_cancion(cancion)
+
+
+# ---------------------------------------------------
+def buscar_cancion():
+    titulo = str(input("Ingrese titulo:")).strip()
+    while not validar_texto_vacio(titulo):
+        titulo = str(input("Ingrese titulo:")).strip()
+
+    encontrado = False
+    for cancion in canciones_list:
+        if cancion["titulo"] == titulo:
+            encontrado = True
+            imprimir_cancion(cancion)
+    if encontrado == False:
+        print("NO hay canciones con dicho titulo")
